@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CareerFlow AI Platform</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Noto+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              // Screen 1: Retro
+              "retro-bg": "#FAF3E1",
+              "retro-gold": "#F5E7C6",
+              "retro-orange": "#ea580c",
+              "retro-text": "#1a1a1a",
+              
+              // Screen 2: Tech Assessment
+              "tech-primary": "#ee8c2b",
+              "tech-bg-light": "#fcfaf8",
+              "tech-bg-dark": "#221910",
+              "tech-soft-black": "#222222",
+              "tech-accent-beige": "#f3ede7",
+              "tech-text-main": "#1b140d",
+              "tech-text-muted": "#9a734c",
+              "tech-code-bg": "#1e1e1e",
+
+              // Screen 3: Newspaper Dashboard
+              "news-primary": "#ff6d1f",
+              "news-paper": "#f9f7f1",
+              "news-ink": "#1d120c",
+              "news-bg-dark": "#23160f",
+            },
+            fontFamily: {
+              "display": ["Inter", "sans-serif"],
+              "mono": ["JetBrains Mono", "monospace"],
+              "serif": ["Newsreader", "serif"],
+              "sans": ["Noto Sans", "sans-serif"],
+            },
+            boxShadow: {
+              "retro": "8px 8px 0px 0px rgba(0,0,0,0.1)",
+              "retro-sm": "4px 4px 0px 0px rgba(0,0,0,0.1)",
+              "hard": "4px 4px 0px 0px rgba(29, 18, 12, 1)",
+              "hard-sm": "2px 2px 0px 0px rgba(29, 18, 12, 1)",
+            }
+          },
+        },
+      }
+    </script>
+    <style>
+      /* Custom utility classes and overrides */
+      body {
+        margin: 0;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      
+      .scrollbar-hide::-webkit-scrollbar {
+          display: none;
+      }
+      .scrollbar-hide {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+      }
+
+      .code-scroll::-webkit-scrollbar {
+          width: 8px;
+          height: 8px;
+      }
+      .code-scroll::-webkit-scrollbar-track {
+          background: #2a2a2a; 
+      }
+      .code-scroll::-webkit-scrollbar-thumb {
+          background: #444; 
+          border-radius: 4px;
+      }
+      .code-scroll::-webkit-scrollbar-thumb:hover {
+          background: #555; 
+      }
+
+      .stamp-rotate {
+          transform: rotate(-12deg);
+      }
+      
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .icon-filled {
+        font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
