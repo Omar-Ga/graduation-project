@@ -1,0 +1,15 @@
+# Netlify configuration file
+
+[build]
+  # This is the command Netlify will run to build your site.
+  command = "npm run build"
+  
+  # This is the directory that contains the built site files.
+  publish = "dist"
+
+# This rule ensures that all paths are redirected to your app's entry point,
+# which is necessary for Single Page Applications like yours.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
